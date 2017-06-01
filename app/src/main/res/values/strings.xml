@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ShaastraEventsapp</string>
+    <string name="Cod_events">Coding Events</string>
+    <string name="Robot_events">Robotic Events</string>
+    <string name="Bus_events">Business Events</string>
+    <string name="Involve_events">Involve and Quizzing</string>
+    <string name="cod_hack">Webops Hackathon</string>
+    <string name="cod_reverse">Reverse Coding</string>
+</resources>
