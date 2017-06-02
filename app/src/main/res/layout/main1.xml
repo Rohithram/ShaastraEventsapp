@@ -40,12 +40,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
+            android:id="@+id/iv_code"
             android:alpha="0.7"
             android:src="@drawable/code"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:id="@+id/tv_cod_text"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:textColor="#000000"
@@ -63,12 +65,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
+            android:id="@+id/iv_robot"
             android:alpha="0.75"
             android:src="@drawable/robot"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
+        android:id="@+id/tv_rob_text"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:textColor="#000000"
@@ -88,10 +92,11 @@
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:alpha="0.75"
+            android:id="@+id/iv_quiz"
             android:src="@drawable/quiz"/>
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tv_quiz_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -113,7 +118,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            android:alpha="0.75"
+            android:id="@+id/iv_bus"
+            android:alpha="0.9"
             android:src="@drawable/busi"/>
 
         <TextView
@@ -121,6 +127,7 @@
             android:layout_height="46dp"
             android:textSize="20dp"
             android:layout_marginLeft="18dp"
+            android:id="@+id/tv_bus_text"
             android:layout_marginTop="18dp"
             android:textColor="#000000"
             android:text="@string/Bus_events"/>
