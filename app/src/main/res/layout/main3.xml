@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_evename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:textSize="30dp"
+        android:textColor="#ad1457"
+        android:text="Eventname" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="8dp"
+        android:layout_below="@+id/tv_evename"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/cardView">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_evename">
+
+            <TextView
+                android:id="@+id/tv_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="49dp"
+                android:text="Description"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/tv_loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:text="Location"
+                android:textSize="32dp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:layout_toEndOf="@+id/tv_prize"
+                android:text="Time"
+                android:textSize="32dp" />
+
+            <TextView
+                android:id="@+id/tv_locval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_loc"
+                android:layout_marginLeft="20dp"
+                android:layout_toStartOf="@+id/tv_prize"
+                android:text="Locval"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_timeval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_time"
+                android:layout_below="@+id/tv_time"
+                android:layout_marginRight="20dp"
+                android:text="Timeval"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_prize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_des"
+                android:layout_below="@+id/tv_loc"
+                android:layout_marginTop="46dp"
+                android:text="PRIZE MONEY"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/tv_prizemoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_prize"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="prize" />
+
+            <TextView
+                android:id="@+id/tv_cord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_prizemoney"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="52dp"
+                android:text="Call a Coordinator"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="28dp" />
+
+            <TextView
+                android:id="@+id/tv_cordname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coordname"
+                android:layout_marginTop="6dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_cord"
+                android:textSize="20dp" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

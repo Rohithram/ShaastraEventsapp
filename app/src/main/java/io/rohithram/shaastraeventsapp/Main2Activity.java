@@ -3,13 +3,18 @@ package io.rohithram.shaastraeventsapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
+import android.view.View;
 import android.widget.TextView;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity implements View.OnClickListener{
     String Eventcag;
+    String code;
     TextView tv_eventcag;
     TextView tv_event1;
     TextView tv_event2;
+    CardView cv_event1;
+    CardView cv_event2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,13 +22,19 @@ public class Main2Activity extends AppCompatActivity {
         tv_eventcag = (TextView)findViewById(R.id.tv_eventcag);
         tv_event1 = (TextView)findViewById(R.id.tv_event1);
         tv_event2 = (TextView)findViewById(R.id.tv_event2);
+        cv_event1 = (CardView)findViewById(R.id.cv_event1);
+        cv_event2 = (CardView)findViewById(R.id.cv_event2);
+        cv_event1.setOnClickListener(this);
+        cv_event2.setOnClickListener(this);
         Intent event = getIntent();
-        String code = event.getStringExtra("code");
+        code = event.getStringExtra("code");
         switch (code){
             case "1": Eventcag=event.getStringExtra("tvcode");
                         tv_eventcag.setText(Eventcag);
                         tv_event1.setText("Hackathon");
                         tv_event2.setText("Reversecoding");
+
+
                         break;
             case "2": Eventcag = event.getStringExtra("tvrob");
                         tv_eventcag.setText(Eventcag);
@@ -43,6 +54,15 @@ public class Main2Activity extends AppCompatActivity {
 
         }
 
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.cv_event1: Intent i2 = new Intent(Main2Activity.this,Main2Activity.class);
+
+        }
 
     }
 }
