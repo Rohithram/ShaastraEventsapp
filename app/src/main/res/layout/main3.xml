@@ -36,27 +36,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="49dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textColor="#000000"
                 android:text="Description"
-                android:textSize="24dp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/tv_loc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_marginLeft="24dp"
                 android:text="Location"
-                android:textSize="32dp" />
+                android:textSize="32dp"
+                android:textColor="#673ab7"
+                android:layout_marginTop="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="26dp" />
 
             <TextView
                 android:id="@+id/tv_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="24dp"
-                android:layout_toEndOf="@+id/tv_prize"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="32dp"
+                android:textColor="#673ab7"
                 android:text="Time"
                 android:textSize="32dp" />
 
@@ -65,10 +70,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_loc"
-                android:layout_marginLeft="20dp"
-                android:layout_toStartOf="@+id/tv_prize"
+                android:layout_marginLeft="48dp"
+                android:gravity="center"
+                android:textColor="#000000"
                 android:text="Locval"
-                android:textSize="20dp" />
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/tv_timeval"
@@ -77,17 +83,20 @@
                 android:layout_alignStart="@+id/tv_time"
                 android:layout_below="@+id/tv_time"
                 android:layout_marginRight="20dp"
+                android:textColor="#000000"
+                android:gravity="center"
                 android:text="Timeval"
-                android:textSize="20dp" />
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/tv_prize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/tv_des"
+                android:layout_centerHorizontal="true"
                 android:layout_below="@+id/tv_loc"
                 android:layout_marginTop="46dp"
                 android:text="PRIZE MONEY"
+                android:textColor="#ff1744"
                 android:textSize="24dp" />
 
             <TextView
@@ -97,6 +106,7 @@
                 android:layout_below="@+id/tv_prize"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
+                android:textColor="#000000"
                 android:text="prize" />
 
             <TextView
@@ -105,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_prizemoney"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="52dp"
+                android:layout_marginBottom="10dp"
                 android:text="Call a Coordinator"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="28dp" />
@@ -115,6 +125,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Coordname"
+                android:gravity="center"
+                android:textColor="#000000"
                 android:layout_marginTop="6dp"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/tv_cord"

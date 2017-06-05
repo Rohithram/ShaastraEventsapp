@@ -60,7 +60,46 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.cv_event1: Intent i2 = new Intent(Main2Activity.this,Main2Activity.class);
+            case R.id.cv_event1: Intent i2 = new Intent(Main2Activity.this,Main3Activity.class);
+                                    switch (code){
+                                        case "1": i2.putExtra("tvhack",String.valueOf(tv_event1.getText()));
+                                                    i2.putExtra("code",code+"1");
+                                                    startActivity(i2);
+                                                        break;
+                                        case "2": i2.putExtra("tvbot",String.valueOf(tv_event1.getText()));
+                                                    i2.putExtra("code",code+"1");
+                                                    startActivity(i2);
+                                                    break;
+                                        case "3": i2.putExtra("tvstartup",String.valueOf(tv_event1.getText()));
+                                                    i2.putExtra("code",code+"1");
+                                                    startActivity(i2);
+                                                    break;
+                                        case "4": i2.putExtra("tvmainquiz",String.valueOf(tv_event1.getText()));
+                                                        i2.putExtra("code",code+"1");
+                                                        startActivity(i2);
+                                                        break;
+                                    }
+                                    break;
+            case R.id.cv_event2: i2 = new Intent(Main2Activity.this,Main3Activity.class);
+                                        switch (code){
+                                            case "1": i2.putExtra("tvreverse",String.valueOf(tv_event2.getText()));
+                                                i2.putExtra("code",code+"2");
+                                                startActivity(i2);
+                                                break;
+                                            case "2": i2.putExtra("tvwars",String.valueOf(tv_event2.getText()));
+                                                i2.putExtra("code",code+"2");
+                                                startActivity(i2);
+                                                break;
+                                            case "3": i2.putExtra("tvtid",String.valueOf(tv_event2.getText()));
+                                                i2.putExtra("code",code+"2");
+                                                startActivity(i2);
+                                                break;
+                                            case "4": i2.putExtra("tvmaincube",String.valueOf(tv_event2.getText()));
+                                                i2.putExtra("code",code+"2");
+                                                startActivity(i2);
+                                                break;
+                                        }
+                                        break;
 
         }
 
