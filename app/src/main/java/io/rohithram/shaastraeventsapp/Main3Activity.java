@@ -1,11 +1,17 @@
 package io.rohithram.shaastraeventsapp;
 
+import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
-public class Main3Activity extends AppCompatActivity {
+public class Main3Activity extends AppCompatActivity implements View.OnClickListener {
 String code;
     TextView tv_evename;
     TextView tv_locval;
@@ -13,7 +19,7 @@ String code;
     TextView tv_timeval;
     TextView tv_prizemoney;
     TextView tv_coordname;
-
+    TextView tv_call;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +30,8 @@ String code;
         tv_des =(TextView)findViewById(R.id.tv_des);
         tv_prizemoney =(TextView)findViewById(R.id.tv_prizemoney);
         tv_coordname =(TextView)findViewById(R.id.tv_cordname);
+        tv_call = (TextView)findViewById(R.id.tv_call);
+        tv_call.setOnClickListener(this);
         Intent i2 = getIntent();
         code = i2.getStringExtra("code");
         switch (code){
@@ -92,5 +100,27 @@ String code;
 
 
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        switch (code){
+            case "11":   callIntent.setData(Uri.parse("tel:+919840563641"));break;
+            case "21":   callIntent.setData(Uri.parse("tel:+919841563641"));break;
+            case "31":   callIntent.setData(Uri.parse("tel:+918755465321"));break;
+            case "41":   callIntent.setData(Uri.parse("tel:+919841363641"));break;
+            case "12":   callIntent.setData(Uri.parse("tel:+919040563641"));break;
+            case "22":   callIntent.setData(Uri.parse("tel:+919840745536"));break;
+            case "32":   callIntent.setData(Uri.parse("tel:+919840563641"));break;
+            case "42":   callIntent.setData(Uri.parse("tel:+919845563641"));break;
+
+        }
+
+        if (ActivityCompat.checkSelfPermission(Main3Activity.this,
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        startActivity(callIntent);
     }
 }
